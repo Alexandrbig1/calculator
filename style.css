@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Noto Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #1e2224;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 40rem;
+  height: 60rem;
+  background-color: #2e2f30;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.screen {
+  width: 34rem;
+  height: 8rem;
+  background-color: #8d8d8d;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  pointer-events: none;
+  text-align: right;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  padding: 2rem;
+}
+
+.btn,
+.equal {
+  width: 7rem;
+  height: 7rem;
+  margin: 1rem;
+  border: none;
+  background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+  box-shadow: inset -0.8rem 0 0.8rem rgba(0, 0, 0, 0.15),
+    inset 0 -0.8rem 0.8rem rgba(0, 0, 0, 0.25), 0 0 0 0.2rem rgba(0, 0, 0, 0.75),
+    1rem 2rem 2.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:active,
+.equal:active {
+  filter: brightness(1.5);
+}
+
+.clear {
+  width: 25rem;
+  background: #d62929;
+}
+
+.btn::before,
+.equal::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 0.3rem;
+  left: 0.4rem;
+  bottom: 0.7rem;
+  right: 1.2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+  box-shadow: -0.5rem -0.5rem 1.5rem rgba(0, 0, 0, 0.1),
+    1rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-left: 0.1rem solid #0004;
+  border-bottom: 0.1rem solid #0004;
+  border-top: 0.1rem solid #0009;
+}
+
+.clear::before {
+  background: #d62929;
+  border-left: 0.1rem solid #fff4;
+  border-bottom: 0.1rem solid #fff4;
+  border-top: 0.1rem solid #fff4;
+}
+
+.equal {
+  background: #37925a;
+}
+
+.equal::before {
+  background: #37925a;
+  border-left: 0.1rem solid #fff4;
+  border-bottom: 0.1rem solid #fff4;
+  border-top: 0.1rem solid #fff4;
+}
